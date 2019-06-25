@@ -1,7 +1,13 @@
-<h1>Display your Pirate here</h1>
+<h1><%=@pirate.name%></h1>
+<p>Height: <%=@pirate.height%></p>
+<p>Weight: <%=@pirate.weight%></p>
 
 
-<h2>Display your first ship here</h2>
 
-
-<h2>Display your second ship here</h2>
+<%@ships.each do |ship|%>
+  <h2><%=ship.name%></h2>
+  <%# headlines automatically come with breaks so no need for <br> %>
+  <p>Name: <%=ship.name%></p><br>
+  <p>Type: <%=ship.type%></p><br>
+  <p>Booty: <%=ship.booty%></p><br>
+<%end%>
